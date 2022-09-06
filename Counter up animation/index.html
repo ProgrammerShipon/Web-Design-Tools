@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Counter animation </title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      section {
+         width: 70%;
+         margin: 0 auto;
+      }
+
+      .counter-body {
+         font-family: 'Roboto', sans-serif;
+         background: linear-gradient(to right #d3cce3, #e9e4f0);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 100vh;
+      }
+
+      .counter-container {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         text-align: center;
+         margin: 30px 50px;
+         background: #d8d8d8;
+         padding: 15px;
+         border-radius: 5px;
+         box-shadow: 1px 1px 3px #565656;
+      }
+
+      .counter {
+         font-size: 60px;
+         margin-top: 10px;
+      }
+
+      .fa-facebook {
+         font-size: 75px;
+         color: #4267B2;
+      }
+
+      .fa-youtube {
+         font-size: 75px;
+         color: #ff0000;
+      }
+
+      .fa-twitter {
+         font-size: 75px;
+         color: #1da1f2;
+      }
+      .fa-instagram {
+         font-size: 75px;
+         color: #fa7e1e  ;
+      }
+
+      section {
+         height: 100vh;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+      }
+
+      @media (max-width: 580px) {
+         .counter-body {
+            flex-direction: column;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <section>
+      <h1> scroll down count animation 1 </h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus tempore numquam magnam eaque quisquam beatae
+         impedit quis dicta doloribus eum a ab suscipit quae ratione obcaecati illum, voluptates, esse repellendus.</p>
+   </section>
+
+   <div class="counter-body">
+      <div class="counter-container">
+         <i class="fab fa-facebook fa-3x"></i>
+         <div class="conter" data-target="1500"></div>
+         <span>Facebook Fans</span>
+      </div>
+      <div class="counter-container">
+         <i class="fab fa-youtube fa-3x"></i>
+         <div class="conter" data-target="5000"></div>
+         <span>youtube subscribers</span>
+      </div>
+      <div class="counter-container">
+         <i class="fab fa-twitter fa-3x"></i>
+         <div class="conter" data-target="4000"></div>
+         <span>twitter follows</span>
+      </div>
+      <div class="counter-container">
+         <i class="fab fab fa-instagram fa-3x"></i>
+         <div class="conter" data-target="4000"></div>
+         <span>twitter follows</span>
+      </div>
+   </div>
+   
+
+   <script>
+      /**
+      const counters = document.querySelectorAll('.conter');
+      counters.forEach((counter) => {
+         counter.innerText = '0';
+
+         const updateCounter = () => {
+            const target = +counter.getAttribute('data-target');
+            const c = +counter.innerText;
+            const increment = target / 250;
+
+            if (c < target ){
+               counter.innerText = `${Math.ceil(c + increment)}`;
+               setTimeout(updateCounter, 1)
+            }
+            else {
+               counter.innerText =  target;
+            }
+         }
+         updateCounter();
+      })
+      */
+
+
+      let section_counter = document.querySelector('.counter-body');
+      let counters = document.querySelectorAll('.conter');
+
+      // Scroll Animation
+
+      let CounterObserver = new IntersectionObserver(
+         (entries, observer) => {
+            let [entry] = entries;
+            if (!entry.isIntersecting) return;
+
+            let speed = 2000;
+            counters.forEach((counter, index) => {
+               function UpdateCounter() {
+                  const targetNumber = +counter.dataset.target;
+                  const initialNumber = +counter.innerText;
+                  const incPerCount = targetNumber / speed;
+                  if (initialNumber < targetNumber) {
+                     counter.innerText = Math.ceil(initialNumber + incPerCount);
+                     setTimeout(UpdateCounter, 1);
+                  } else {
+                     counters.innerText = targetNumber;
+                  }
+               }
+               UpdateCounter();
+
+               // if (counter.parentElement.style.animation) {
+               //    counter.parentElement.style.animation = '';
+               // } else {
+               //    counter.parentElement.style.animation = `slide-up 0.3s ease forwards ${
+               //       index / counters.length + 0.5
+               //    }s`;
+               // }
+            });
+            observer.unobserve(section_counter);
+         },
+         {
+            root: null,
+            threshold: window.innerWidth > 768 ? 0.4 : 0.3,
+         }
+      );
+
+      CounterObserver.observe(section_counter);
+   </script>
+</body>
+
+</html>

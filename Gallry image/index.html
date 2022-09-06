@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Gallry Image </title>
+   <style>
+      * {
+         margin: 0 ; 
+         padding: 0;
+         box-sizing: border-box;
+         font-family: 'poppins', sans-serif;
+      }
+
+      .container {
+         width: 100%;
+         min-height: 100vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 50px 8%;
+      }
+      .gallery {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+         grid-gap: 30px;
+      }
+
+      .gallery img {
+         width: 100%;
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <div class="gallery">
+         <img src="./images/1.jpg" >
+         <img src="./images/2.jpg" >
+         <img src="./images/3.jpg" >
+         <img src="./images/4.jpg" >
+         <img src="./images/5.jpg" >
+         <img src="./images/6.jpg" >
+         <img src="./images/7.jpg" >
+         <img src="./images/8.jpg" >
+      </div>
+   </div>
+   </div>
+</body> 
+</html>

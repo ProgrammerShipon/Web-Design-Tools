@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Login Form </title>
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         font-family: sans-serif;
+      }
+      body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         min-height: 100vh;
+         background: linear-gradient(-15deg, rgba(255,255,255,0.5) , rgba(0,0,0,0.1));
+      }
+      .form {
+         display: flex;
+         flex-direction: column;
+         width: 270px;
+         padding: 35px;
+         text-align: center;
+         align-items: center;
+         background: #1d1d1d;
+         box-shadow: 0px 9px 25px 0px rgb(0 0 0 / 40%);
+         border-radius: 10px;
+         overflow: hidden;
+      }
+      .form h1 {
+         text-transform: uppercase;
+         color: #ffffff;
+         font-weight: 500;
+         margin-bottom: 20px;
+      }
+      .form h1::before {
+         content: '';
+         position: absolute;
+         height: 3px;
+         width: 289px;
+         background: #b3aeae;
+         margin-top: 45px;
+         margin-left: -97px;
+         border-radius: 50%;
+      }
+      input[type="text"],
+      input[type="password"] {
+         outline: none;
+         width: 220px;
+         text-align: center;
+         font-size: 17px;
+         padding: 10px 5px;
+         margin: 10px 0px;
+         border-radius: 30px;
+         background: rgba(0,0,0,0.5);
+         color: #fff;
+         border: 2px solid #3498bdbb;
+         transition: .4s;
+      }
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+         width: 280px;
+         border-color:  rgba(0, 128, 0, 1);
+         background: rgba(0,0,0,0.9);
+      }
+      input[type="submit"] {
+         width: 150px;
+         padding: 10px 5px;
+         margin: 10px 0px;
+         border-radius: 30px;
+         outline: none;
+         border: 2px solid rgba(0, 128, 0, 0.856);
+         background: rgba(0,0,0,0.5);
+         color: #fff;
+         font-size: 17px;
+         transition: .4s;
+      }
+      input[type="submit"]:hover {
+         background: rgba(0, 128, 0, 0.856);
+      }
+      .form > a::before {
+         content: '';
+         position: absolute;
+         height: 3px;
+         width: 289px;
+         background: #b3aeae;
+         margin-top: 1px;
+         margin-left: -97px;
+         border-radius: 50%;
+      }
+      .form > a {
+         color: #fff;
+         text-decoration: none;
+         font-size: 15px;
+         margin-top: 25px;
+         margin-bottom: 5px;
+         transition: .4s;
+      }
+      .form > a::before {
+         content: '';
+         position: absolute;
+         height: 3px;
+         width: 289px;
+         background: #b3aeae;
+         margin-top: -15px;
+         margin-left: -97px;
+         border-radius: 50%;
+      }
+      .form > a:hover {
+         text-decoration: underline;
+         color: rgba(255, 255, 255, 0.836);
+      }
+      .singUpBtn {
+         color: rgba(255, 255, 255, 0.808);
+         display: flex;
+         margin-top: 10px;
+         font-size: 16px;
+      }
+      .singUpBtn a {
+         color: rgb(223, 223, 223);
+         margin-left: 5px;
+         text-decoration: none;
+         transition: .4s;
+      }
+      .singUpBtn a:hover {
+         color: #1bf31b;
+         text-decoration: underline;
+      }
+   </style>
+</head>
+<body>
+   <form class="form" action="#">
+      <h1> Login </h1>
+      <input type="text" placeholder="User name" >
+      <input type="password" placeholder="Password" >
+      <input type="submit" value="Login">
+      <a href="#"> Forgot Password </a>
+      <div class="singUpBtn">
+         <p> Do not have an account ? </p>
+         <a href="#"> Signup </a>
+      </div>
+   </form>
+</body>
+</html>
