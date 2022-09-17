@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <div class="section">
+          <div class="title-bar">
+            <h2>User data change on same window</h2>
+          </div>
+          <table>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>User Id</th>
+              <th>Email</th>
+              <th>Number</th>
+              <th>Edit Option</th>
+            </tr>
+            <tr>
+              <td>Shipon Hossen</td>
+              <td>Raju</td>
+              <td>Shipon34556</td>
+              <td>abc23s4@gmail.com</td>
+              <td>01765037372</td>
+              <td id="edit">Edit</td>
+            </tr>
+            <tr>
+              <td>Rahul</td>
+              <td>Islam</td>
+              <td>Shipon34556</td>
+              <td>abc234@gmail.com</td>
+              <td>01741323736</td>
+              <td id="edit">Edit</td>
+            </tr>
+          </table>
+          <div class="popUp">
+            <div class="popUp-content">
+              <div class="close">X</div>
+              <div class="updateTitle">
+                <h1>Update User Details</h1>
+              </div>
+              <div class="updateItems">
+                <label for="updateName"> First Name : </label>
+                <input
+                  type="text"
+                  id="updateName"
+                  placeholder="Your First Name"
+                />
+              </div>
+              <div class="updateItems">
+                <label for="updatelsName"> last Name : </label>
+                <input
+                  type="text"
+                  id="updatelsName"
+                  placeholder="Your last Name"
+                />
+              </div>
+              <div class="updateItems">
+                <label for="updateUserId"> Update UserId : </label>
+                <input
+                  type="text"
+                  id="updateUserId"
+                  placeholder="Your Update UserId"
+                />
+              </div>
+              <div class="updateItems">
+                <label for="updateEmail"> Email : </label>
+                <input
+                  type="email"
+                  id="updateEmail"
+                  placeholder="Your Update Your Email"
+                />
+              </div>
+              <div class="updateItems">
+                <label for="updateNumber"> Number : </label>
+                <input
+                  type="number"
+                  id="updateNumber"
+                  placeholder="Your Number"
+                />
+              </div>
+              <button class="updateBtn">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
