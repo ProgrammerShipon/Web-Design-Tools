@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.inputText {
+  margin: 20px;
+  padding: 20px;
+  background: darkgray;
+  border: 5px;
+  min-width: 350px;
+  width: 50%;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(200, 200, 200, 0.5)
+}
+
+.inputText input,
+.inputText textarea {
+  padding: 5px 6px;
+  margin: 5px 0px;
+  width: 100%;
+  font-size: 1.15rem;
+  outline: none;
+}
+
+.inputText button {
+  padding: 10px 15px;
+  margin: 5px 0px;
+  border-radius: 4px;
+}
+
+
