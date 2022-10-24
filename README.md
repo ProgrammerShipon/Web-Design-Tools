@@ -19,5 +19,6 @@ https://programmershipon.github.io/Web-Design-Tools/Gallry%20image/
 ## Light
 https://programmershipon.github.io/Web-Design-Tools/Light/
 
-
+## Details Update insert
+https://programmershipon.github.io/Web-Design-Tools/Details%20Update%20insert%20-%20Sayad/
 
