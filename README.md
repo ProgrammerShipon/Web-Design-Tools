@@ -1,7 +1,7 @@
 # Web-Design-Tools
 Web site tools are kept here
 
-# Git repository all folders are live..
+#* Git repository all folders are live..
 
 ## Counter up animation
 https://programmershipon.github.io/Web-Design-Tools/Counter%20up%20animation/
