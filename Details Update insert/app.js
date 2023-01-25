@@ -12,7 +12,7 @@ const updateEmail = document.querySelector('#updateEmail');
 const updateNumber = document.querySelector('#updateNumber');
 
 
-editBtn.forEach ( btn => {
+editBtn.forEach(btn => {
   btn.addEventListener('click', () => {
     const btnSibling = btn.previousElementSibling;
     const number = btnSibling;
@@ -31,7 +31,7 @@ editBtn.forEach ( btn => {
     updateEmail.value = email.innerHTML;
     updateNumber.value = number.innerText;
 
-    updateBtn.addEventListener( 'click', () => {
+    updateBtn.addEventListener('click', () => {
       firstName.innerHTML = updateName.value;
       lastName.innerHTML = updatelsName.value;
       userId.innerHTML = updateUserId.value;
@@ -48,7 +48,7 @@ const dataTable = document.querySelector('.dataTable');
 
 // Add Button Click Events
 const Addbtn = document.querySelector('#addNewData');
-Addbtn.addEventListener('click',  () => {
+Addbtn.addEventListener('click', () => {
   popUpOpen.style.visibility = "visible";
 
   // insert Btn
@@ -88,23 +88,13 @@ Addbtn.addEventListener('click',  () => {
   })
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Close pop
 popUpClose.addEventListener("click", function () {
+  // input field clear
+  updateName.value = '';
+  updatelsName.value = '';
+  updateUserId.value = '';
+  updateEmail.value = '';
+  updateNumber.value = '';
   popUpOpen.style.visibility = "hidden";
 });
-

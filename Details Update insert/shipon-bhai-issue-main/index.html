@@ -47,14 +47,15 @@
             <button id="addNewData">Add New Data</button>
           </div>
           <div class="popUp">
-            <div class="popUp-content">
-              <div class="close">X</div>
+            <form class="popUp-content">
+              <div id="close" class="close">X</div>
               <div class="updateTitle">
                 <h1>Update User Details</h1>
               </div>
               <div class="updateItems">
                 <label for="updateName"> First Name : </label>
                 <input
+                  name="firstName"
                   type="text"
                   id="updateName"
                   placeholder="Your First Name"
@@ -63,6 +64,7 @@
               <div class="updateItems">
                 <label for="updatelsName"> last Name : </label>
                 <input
+                  name="lastName"
                   type="text"
                   id="updatelsName"
                   placeholder="Your last Name"
@@ -71,6 +73,7 @@
               <div class="updateItems">
                 <label for="updateUserId"> Update UserId : </label>
                 <input
+                  name="userId"
                   type="text"
                   id="updateUserId"
                   placeholder="Your Update UserId"
@@ -79,6 +82,7 @@
               <div class="updateItems">
                 <label for="updateEmail"> Email : </label>
                 <input
+                  name="email"
                   type="email"
                   id="updateEmail"
                   placeholder="Your Update Your Email"
@@ -87,17 +91,18 @@
               <div class="updateItems">
                 <label for="updateNumber"> Number : </label>
                 <input
+                  name="number"
                   type="number"
                   id="updateNumber"
                   placeholder="Your Number"
                 />
               </div>
-              <button class="updateBtn">Update</button>
-            </div>
+              <button id="update" class="updateBtn">Update</button>
+            </form>
           </div>
         </div>
       </div>
     </main>
-    <script src="./app.sayed.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
