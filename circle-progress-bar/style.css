@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+body {
+  height: 100vh;
+  background-color: #0e0d1d;
+}
+
+.container {
+  height: 400px;
+  width: 400px;
+  background-color: #ececee;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 9px;
+  box-shadow: 20px 20px 40px #3c3c9633;
+  display: grid;
+  place-items: center;
+}
+
+.circular-progress {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  background-color: #0073ff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 85%;
+  width: 85%;
+  background: #ececee;
+  border-radius: 50%;
+}
+
+.value-container {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2rem;
+  color: #0e0d1d;
+}
